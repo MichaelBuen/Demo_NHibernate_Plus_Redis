@@ -19,7 +19,7 @@ create table Person
 );
 
 
--- 20 rows are the magic numbers, it's the quantity of information the users can see at one look
+-- 20 rows is the magic number, it's the quantity of information the users can see at one look
 -- select * from person limit 20 offset 0
 
 
