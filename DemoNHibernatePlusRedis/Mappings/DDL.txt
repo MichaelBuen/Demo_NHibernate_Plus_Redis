@@ -45,5 +45,5 @@ insert into Person(PersonName, CountryBorned_CountryId) values('Lei Huaze', 2);
 insert into Person(PersonName, CountryBorned_CountryId) values('Zhuo Mei', 2);
 insert into Person(PersonName, CountryBorned_CountryId) values('Men Xi', 2);
 insert into Person(PersonName, CountryBorned_CountryId) values('Ming Yao', 2);
-insert into Person(PersonName, CountryBorned_CountryId) values('Bruce Lee', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Bruce Li', 2);
 insert into Person(PersonName, CountryBorned_CountryId) values('Jacky Chan', 2);
