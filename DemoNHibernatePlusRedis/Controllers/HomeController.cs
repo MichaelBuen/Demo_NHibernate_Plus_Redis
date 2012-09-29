@@ -76,7 +76,7 @@ namespace DemoNHibernatePlusRedis.Controllers
 
                 var peopleList =
                     (from p in session.Query<Person>()
-                         // .Cacheable()
+                         .Cacheable()
                          .Fetch(x => x.CountryBorned)
                      orderby p.CountryBorned.CountryId, p.PersonId 
                      select new { PersonName = p.PersonName, BornedAt = p.CountryBorned.CountryName }).ToList();
