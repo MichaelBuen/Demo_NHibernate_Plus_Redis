@@ -1,0 +1,49 @@
+﻿use Test;
+
+/*
+drop table Person;
+drop table Country;
+*/
+
+create table Country
+(
+	CountryId				int identity(1,1)	primary key,
+	CountryName				nvarchar(100)		not null
+);
+
+create table Person
+(
+	PersonId				int identity(1,1)	primary key,
+	PersonName				nvarchar(100)		not null,
+	CountryBorned_CountryId	int					not null references Country(CountryId)
+);
+
+
+-- 20 rows are the magic numbers, it's the quantity of information the users can see at one look
+-- select * from person limit 20 offset 0
+
+
+insert into Country(CountryName) values('Philippines');
+insert into Person(PersonName, CountryBorned_CountryId) values('Leonides Buen', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Emma Ignacio', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Michael Buen', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Jose Rizal', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Andres Bonifacio', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Diego Silang', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Lapu-Lapu', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Robert Jaworski', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Manny Pacquiao', 1);
+insert into Person(PersonName, CountryBorned_CountryId) values('Ramon Zamora', 1);
+
+
+insert into Country(CountryName) values('China');
+insert into Person(PersonName, CountryBorned_CountryId) values('Jinshui Luo', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Mingyu Guo', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Dongling Luo', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Mingsi Dao', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Lei Huaze', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Zhuo Mei', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Men Xi', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Ming Yao', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Bruce Lee', 2);
+insert into Person(PersonName, CountryBorned_CountryId) values('Jacky Chan', 2);
