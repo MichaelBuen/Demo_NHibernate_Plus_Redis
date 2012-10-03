@@ -45,14 +45,17 @@
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.Caches.Redis">
-      <HintPath>..\..\..\..\Downloads\boxerab-NHRedis-f4c2e06\boxerab-NHRedis-f4c2e06\NHibernate.Caches\Redis\NHibernate.Caches.Redis\bin\Debug\NHibernate.Caches.Redis.dll</HintPath>
+    <Reference Include="NHibernate.Caches.Redis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>OtherDLLs\NHibernate.Caches.Redis.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Redis">
-      <HintPath>..\..\..\..\Downloads\ServiceStack.Redis\ServiceStack.Redis.dll</HintPath>
+    <Reference Include="ServiceStack.Redis, Version=2.2.0.20691, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>OtherDLLs\ServiceStack.Redis.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\..\..\Downloads\ServiceStack.Redis\ServiceStack.Text.dll</HintPath>
+    <Reference Include="ServiceStack.Text, Version=2.2.6.20579, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>OtherDLLs\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

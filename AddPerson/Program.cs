@@ -33,7 +33,18 @@ namespace AddPerson
                 {
                     using (var tx = session.BeginTransaction())
                     {
-                        session.Save(new Person { PersonName = personName, CountryBorned = session.Load<Country>(1) });
+                        // var px = session.Get<Person>(1);
+                        //var px = session.Query<Person>().Single(x => x.PersonId == 2);
+                        //px.PersonName = personName;
+                        //session.Save(px);
+
+                        // session.Save(new Person { PersonName = personName, CountryBorned = session.Load<Country>(1) });
+                        
+
+                        // session.Delete(session.Load<Person>(3));
+
+
+                        session.Delete(new Person { PersonId = 4 });
 
                         tx.Commit();
                     }
@@ -53,7 +64,7 @@ namespace AddPerson
 
                     var peopleList =
                         (from p in session.Query<Person>()
-                              .Cacheable()
+                              // .Cacheable()
                              .Fetch(x => x.CountryBorned)
                          orderby p.CountryBorned.CountryId
                          select new { PersonName = p.PersonName, BornedAt = p.CountryBorned.CountryName }).ToList();
